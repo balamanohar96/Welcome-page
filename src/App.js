@@ -1,11 +1,13 @@
+import { Provider } from "react-redux";
 import "./App.css";
-import Form from "./components/Form";
+import store from "./redux/appStore";
+import Routes from "./components/Routes";
 
 function App() {
   return (
-    <div>
-      <Form />
-    </div>
+    <Provider store={store}>
+      <Routes />
+    </Provider>
   );
 }
 
